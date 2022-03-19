@@ -1,0 +1,41 @@
+/* HOME PAGE */
+
+.logo {
+  position: relative;
+  max-width: 500px;
+  margin: 2% auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .tesodevLogo {
+    border-top-right-radius: 10px 20px;
+    border-bottom-left-radius: 10px 20px;
+    margin-bottom: 5%;
+  }
+
+  .logoText {
+    position: absolute;
+    right: 12%;
+    bottom: 5px;
+    color: #525252;
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+
+/* RESULTS PAGE */
+
+.logoTop {
+  position: absolute;
+  left: 3%;
+  top: 3%;
+
+  .tesodevLogoTop {
+    border-top-right-radius: 10px 20px;
+    border-bottom-left-radius: 10px 20px;
+    object-fit: fill;
+    display: block;
+    max-width: 100%;
+  }
+}
