@@ -18,7 +18,7 @@ function Result({ isHome, searching }) {
                     {item[0]} - {item[3].substr(-4)}
                   </span>
                 </span>
-                <span className="tableColRigh colt">
+                <span className="tableColRight col">
                   <span className="email">Email: {item[2]}</span>
                 </span>
               </td>
