@@ -12,13 +12,13 @@ function Result({ isHome, searching }) {
           currentItems.map((item) => (
             <tr>
               <td>
-                <span className="tableColLeft">
+                <span className="tableColLeft col">
                   <span className="country">{item[4]}</span>
                   <span className="nameYear">
                     {item[0]} - {item[3].substr(-4)}
                   </span>
                 </span>
-                <span className="tableColRight">
+                <span className="tableColRigh colt">
                   <span className="email">Email: {item[2]}</span>
                 </span>
               </td>

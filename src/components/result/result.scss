@@ -263,3 +263,21 @@ table {
     }
   }
 }
+
+@media only screen and (max-width: 1500px) {
+  .resultBoxResultPage {
+    position: relative;
+    width: 100%;
+    display: flex;
+  }
+  .searchBy {
+    width: 100%;
+    margin-left: 0;
+  }
+  .searchInput {
+    width: 40%;
+  }
+  .searchButton {
+    width: 15%;
+  }
+}

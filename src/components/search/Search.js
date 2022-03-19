@@ -154,7 +154,7 @@ function Search({ isHome, onClick }) {
       ) : (
         <>
           <div className="searchBoxTop">
-            <div className="searchByTop">
+            <div className="searchByTop col">
               <span>Search By: </span>
               <span
                 onClick={() => {
@@ -198,7 +198,7 @@ function Search({ isHome, onClick }) {
               type="text"
               onChange={onChange}
               className={
-                "searchInput searchInputTop " +
+                "searchInput searchInputTop col " +
                 (searchText.length > 2 ? "active " : "deactive ") +
                 (error ? "searchInputError errorText" : "")
               }

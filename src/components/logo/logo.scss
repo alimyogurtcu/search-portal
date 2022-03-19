@@ -1,5 +1,3 @@
-/* HOME PAGE */
-
 .logo {
   position: relative;
   max-width: 500px;
@@ -24,8 +22,6 @@
   }
 }
 
-/* RESULTS PAGE */
-
 .logoTop {
   position: absolute;
   left: 3%;
@@ -37,5 +33,16 @@
     object-fit: fill;
     display: block;
     max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .logoTop {
+    display: block;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
