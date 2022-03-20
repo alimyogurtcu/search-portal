@@ -39,6 +39,7 @@ function Search({ isHome, onClick }) {
 
   const searching = () => {
     let searchArray = [];
+    localStorage.setItem("searchBy", searchBy);
     if (searchText.length > 2) {
       if (searchBy === "nameSurname") {
         mockData.data.find((user) => {
