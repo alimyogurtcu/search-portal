@@ -33,6 +33,16 @@ function Result({ isHome, searching }) {
     var localSearchedString = localStorage.getItem("searchingList");
     var localSearchedObject = JSON.parse(localSearchedString);
 
+    if (
+      localOrderBy !== "nameAsc" &&
+      localOrderBy !== "nameDesc" &&
+      localOrderBy !== "yearAsc" &&
+      localOrderBy !== "yearDesc"
+    ) {
+      localOrderBy = "nameAsc";
+      localStorage.setItem("orderBy", "nameAsc");
+    }
+
     var items;
 
     if (localSearchedObject) {
@@ -48,6 +58,10 @@ function Result({ isHome, searching }) {
     const [orderBy, setOrderBy] = useState(
       localOrderBy ? localOrderBy : "nameAsc"
     );
+
+    useEffect(() => {
+      localOrderBy && setOrderBy(localOrderBy);
+    }, []);
 
     useEffect(() => {
       setShowOrderBy(!showOrderBy);

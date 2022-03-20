@@ -6,6 +6,16 @@ import "./search.scss";
 function Search({ isHome, onClick }) {
   var localSearchBy = localStorage.getItem("searchBy");
 
+  if (
+    localSearchBy !== "nameSurname" &&
+    localSearchBy !== "country" &&
+    localSearchBy !== "year" &&
+    localSearchBy !== "email"
+  ) {
+    localSearchBy = "nameSurname";
+    localStorage.setItem("searchBy", "nameSurname");
+  }
+
   const [searchText, setSearchText] = useState("");
   const [error, setError] = useState(false);
   const [searchBy, setSearchBy] = useState(
@@ -13,6 +23,10 @@ function Search({ isHome, onClick }) {
   );
 
   var lastSearch = localStorage.getItem("lastSearch");
+
+  useEffect(() => {
+    lastSearch && setSearchText(lastSearch);
+  }, []);
 
   useEffect(() => {
     if (searchText.length < 3) setError(false);
@@ -129,7 +143,7 @@ function Search({ isHome, onClick }) {
                 (searchText.length > 2 ? "active " : "deactive ") +
                 (error ? "searchInputError errorText" : null)
               }
-              defaultValue={lastSearch && lastSearch}
+              defaultValue={lastSearch}
               placeholder="If you want to reset the list, do an empty search."
             />
             <button
@@ -202,7 +216,7 @@ function Search({ isHome, onClick }) {
                 (searchText.length > 2 ? "active " : "deactive ") +
                 (error ? "searchInputError errorText" : "")
               }
-              defaultValue={lastSearch && lastSearch}
+              defaultValue={lastSearch}
               placeholder="If you want to reset the list, do an empty search."
             />
             <button
